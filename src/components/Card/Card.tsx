@@ -1,5 +1,4 @@
 import Image from "next/image"
-import a from "@/assets/civic-site.png"
 import styles from "@/components/Card/Card.module.css"
 
 interface LayoutCard {
