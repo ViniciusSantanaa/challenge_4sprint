@@ -1,0 +1,12 @@
+.produto{
+    color: var(--cor-cinza);
+    font-size: 2rem;
+    margin: 2rem;
+    
+}
+
+.a{
+    color: var(--cor-cinza);
+    text-align: center;
+    margin-top: 2rem;
+}
