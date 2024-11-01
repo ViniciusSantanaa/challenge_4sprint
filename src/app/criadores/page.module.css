@@ -1,5 +1,21 @@
 .main{
     display: flex;
     justify-content: space-around;
-    margin-top: 4rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.ajuste_repo{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.repo{
+    border: solid 0.3rem var(--cor-cinza-escuro);
+    color: var(--cor-cinza-escuro);
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
 }
