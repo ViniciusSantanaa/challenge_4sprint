@@ -18,7 +18,7 @@ export default function Home() {
       </div>
 
       <div className={styles.div_texto}>
-        <p className={styles.texto}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam labore laboriosam, ab molestias, nesciunt recusandae quaerat aspernatur eaque ratione laborum numquam aliquam unde. Laboriosam aut doloribus quod recusandae nostrum quaerat.</p>
+        <p className={styles.texto}>Com nosso Seguro Automotivo, você pode ter a tranquilidade de saber que seu investimento está protegido contra imprevistos que poderiam comprometer seu valor. Preserve o valor do seu veículo e dirija com confiança sabendo que estamos cuidando dele.</p>
         <Image src={carro} alt='carro' className={styles.img_carro}/>
       </div>
 
