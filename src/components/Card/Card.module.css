@@ -1,0 +1,6 @@
+.fundo_card{
+    background-color: var(--cor-fundo-card);
+    width: 22rem;
+    height: 25rem;
+    border-radius: 0.5rem;
+}
