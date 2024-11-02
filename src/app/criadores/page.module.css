@@ -12,7 +12,7 @@
 }
 
 .repo{
-    border: solid 0.3rem var(--cor-cinza-escuro);
+    border: solid 0.2rem var(--cor-cinza-escuro);
     color: var(--cor-cinza-escuro);
     font-weight: bold;
     font-size: 1.5rem;
