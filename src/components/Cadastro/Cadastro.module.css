@@ -1,0 +1,37 @@
+.div_form{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    align-items: center;
+}
+
+.input{
+    font-weight: bold;
+    color: var(--cor-cinza);
+    border: none;
+    background-color: var(--cor-fundo-card);
+    width: 25rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+.button{
+    background-color: var(--cor-azul-border);
+    border: none;
+    color: var(--cor-branca);
+    width: 25rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.erro{
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+

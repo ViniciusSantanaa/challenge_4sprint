@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main>
       <div className={styles.slogan_imagem}>
-        <h1 className={styles.slogan}> Seu carro é mais do que apenas um meio de transporte, é um investimento valioso.</h1>
+        <h1 className={styles.slogan}>Seu carro é mais do que apenas um meio de transporte, é um investimento valioso.</h1>
         <Image src={mulher_dirigindo} alt='mulher dirigindo' className={styles.imagem_mulher}/>
       </div>
 

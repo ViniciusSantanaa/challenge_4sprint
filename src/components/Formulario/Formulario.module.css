@@ -1,0 +1,17 @@
+.fundo_form{
+    background-color: var(--cor-branca);
+    width: 30rem;
+    height: 30rem;
+    border-radius: 0.5rem;
+    margin-left: auto;
+    margin-right: 2rem;
+    background-image: none;
+}
+
+.h1{
+    color: var(--cor-cinza);
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
