@@ -36,10 +36,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.div_texto}>
+      <section className={styles.div_texto}>
         <p className={styles.texto}>Com nosso Seguro Automotivo, você pode ter a tranquilidade de saber que seu investimento está protegido contra imprevistos que poderiam comprometer seu valor. Preserve o valor do seu veículo e dirija com confiança sabendo que estamos cuidando dele.</p>
         <Image src={carro} alt='carro' className={styles.img_carro}/>
-      </div>
+      </section>
 
     </main>
   )
