@@ -1,11 +1,47 @@
+"use client"
 import { Formulario } from "@/components/Formulario/Formulario";
 import styles from "@/app/orcamento/page.module.css"
 import { Card } from "@/components/Card/Card";
 import freio from "@/assets/freio_carro.jpg"
 import vela from "@/assets/vela_ignicao.jpg"
 import bateria from "@/assets/bateria_carro.jpeg"
+import { useState } from "react";
+import { TipoProduto } from "@/types/Types";
 
 export default function Orcamento(){
+
+    const [orcamento, setOrcamento] = useState<TipoProduto>({
+        descricaoProblema: ""
+    })
+
+    const handleChange = (evento: React.ChangeEvent<HTMLInputElement>) => {
+        const {name, value} = evento.target
+        setOrcamento({...orcamento, [name]:value})
+    }
+
+    const handleSubmit = async(evento: React.FormEvent<HTMLFormElement>) => {
+        evento.preventDefault()
+
+        try{
+            const response = await fetch("http://localhost:8080/challenge/rest/diagnostico", {
+                method: "POST",
+                headers: {
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify(orcamento)
+            })
+
+            if (response.ok) {
+                alert("Recebemos seu problema! ")
+                setOrcamento({
+                    descricaoProblema: ""
+                })
+            }
+
+    } catch (error) {
+        console.error("Falha na descrição: ", error)
+    }
+
     return(
         <>
         <main className={styles.main}>
@@ -18,18 +54,15 @@ export default function Orcamento(){
             </div>
 
             <Formulario titulo='Faça seu orçamento'>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className={styles.div_form}>
                         <input
                             type="text"
-                            placeholder="   Digite o nome da peça"
-                            className={styles.input}
-                        />
-                    </div>
-                    <div className={styles.div_form}>
-                        <input
-                            type="text"
+                            name="descricao_problema"
+                            value={orcamento.descricaoProblema}
+                            onChange={(evento) => handleChange(evento)}
                             placeholder="   Descreva o problema"
+                            required
                             className={styles.input}
                             />
                     </div>
@@ -42,4 +75,4 @@ export default function Orcamento(){
         </main>
         </>
     )
-}
+}}
