@@ -16,3 +16,37 @@
     font-size: 2rem;
 }
 
+@media (max-width: 430px) {
+    .fundo_form{
+        width: 20rem;
+        height: 30rem;
+        margin-right: auto;
+        margin-top: 0;
+    }
+    
+    .h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 744px) {
+    .fundo_form{
+        width: 25rem;
+        height: 30rem;
+        margin-right: auto;
+        margin-top: 0;
+    }
+    
+    .h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 745px) and (max-width: 834px) {
+
+}
+
+@media (min-width: 835px) and (max-width: 1024px) {
+
+}
+
