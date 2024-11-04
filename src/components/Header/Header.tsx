@@ -9,6 +9,7 @@ export default function Header(){
 
             <div>
                 <ul className={styles.menu}>
+                    <li><Link href="/orcamento" className={styles.links}>Orçamentos</Link></li>
                     <li><Link href="/produto" className={styles.links}>Sobre o produto</Link></li>
                     <li><Link href="/criadores" className={styles.links}>Cr<strong className={styles.strong_criadores}>IA</strong>dores</Link></li>
                     <li><Link href="/login" className={styles.login}>Login</Link></li>
