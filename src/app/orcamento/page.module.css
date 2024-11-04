@@ -1,11 +1,20 @@
 .main{
-    background-image: url('../../assets/imagem_mecanico.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.div_problema{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.problema{
+    color: var(--cor-cinza);
+    font-size: 2rem;
+    text-align: center;
 }
 
 .div_form{
@@ -20,7 +29,7 @@
     color: var(--cor-cinza);
     border: none;
     background-color: var(--cor-fundo-card);
-    width: 25rem;
+    width: 20rem;
     height: 3rem;
     border-radius: 0.3rem;
     font-size: 1rem;
@@ -30,9 +39,51 @@
     background-color: var(--cor-azul-border);
     border: none;
     color: var(--cor-branca);
-    width: 25rem;
+    width: 20rem;
     height: 3rem;
     border-radius: 0.3rem;
     font-weight: bold;
     font-size: 1rem;
 }
+
+@media (max-width: 430px) {
+    .main{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input{
+        width: 15rem;
+    }
+    
+    .button{
+        width: 15rem;
+    }
+
+}
+
+@media (min-width: 431px) and (max-width: 744px) {
+    .main{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 745px) and (max-width: 834px) {
+    .main{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (min-width: 835px) and (max-width: 1024px) {
+    .main{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}  
