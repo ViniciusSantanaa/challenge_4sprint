@@ -9,6 +9,8 @@ import { useState } from "react";
 import { TipoProduto } from "@/types/Types";
 
 export default function Orcamento(){
+    
+    const apiKey =  process.env.NEXT_PUBLIC_GUARDIAN_KEY || "";
 
     const [orcamento, setOrcamento] = useState<TipoProduto>({
         descricaoProblema: ""
@@ -20,10 +22,11 @@ export default function Orcamento(){
     }
 
     const handleSubmit = async(evento: React.FormEvent<HTMLFormElement>) => {
-        evento.preventDefault()
+            evento.preventDefault()
+        console.log("enviou")
 
         try{
-            const response = await fetch("http://localhost:8080/challenge/rest/diagnostico", {
+            const response = await fetch(apiKey, {
                 method: "POST",
                 headers: {
                     "Content-Type":"application/json"
@@ -41,6 +44,7 @@ export default function Orcamento(){
     } catch (error) {
         console.error("Falha na descrição: ", error)
     }
+    }
 
     return(
         <>
@@ -48,9 +52,9 @@ export default function Orcamento(){
 
             <div className={styles.div_problema}>
                 <h1 className={styles.problema}>Peças que normalmente dão problemas</h1>
-                <Card imagem_criador={freio} texto1="Disco de freio" texto2="Valor: R$150 a R$500 cada" />
-                <Card imagem_criador={vela} texto1="Vela de ignição" texto2="Valor: R$20 a R$50 cada" />
-                <Card imagem_criador={bateria} texto1="Bateria de carros" texto2="Valor: R$300 a R$600" />
+                <Card imagemCriador={freio} texto1="Disco de freio" texto2="Valor: R$150 a R$500 cada" />
+                <Card imagemCriador={vela} texto1="Vela de ignição" texto2="Valor: R$20 a R$50 cada" />
+                <Card imagemCriador={bateria} texto1="Bateria de carros" texto2="Valor: R$300 a R$600" />
             </div>
 
             <Formulario titulo='Faça seu orçamento'>
@@ -59,7 +63,7 @@ export default function Orcamento(){
                         <input
                             type="text"
                             name="descricao_problema"
-                            value={orcamento.descricaoProblema}
+                            // value={orcamento.descricaoProblema}
                             onChange={(evento) => handleChange(evento)}
                             placeholder="   Descreva o problema"
                             required
@@ -75,4 +79,4 @@ export default function Orcamento(){
         </main>
         </>
     )
-}}
+}
