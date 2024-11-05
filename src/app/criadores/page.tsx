@@ -9,11 +9,11 @@ export default function Criadores(){
     return(
         <>
             <main className={styles.main}>
-                <Card imagem_criador={Felipe} texto1={"Felipe Rosa Peres"} texto2={"RM 557636"} texto3={"1TDSPX"} />
+                <Card imagemCriador={Felipe} texto1={"Felipe Rosa Peres"} texto2={"RM 557636"} texto3={"1TDSPX"} />
 
-                <Card imagem_criador={Vinicius} texto1={"Vinícius de Souza Sant Anna"} texto2={"RM 556841"} texto3={"1TDSPX"} />
+                <Card imagemCriador={Vinicius} texto1={"Vinícius de Souza Sant Anna"} texto2={"RM 556841"} texto3={"1TDSPX"} />
 
-                <Card imagem_criador={Pedro} texto1={"Pedro Henrique De Souza"} texto2={"RM 555533"} texto3={"1TDSPX"} />
+                <Card imagemCriador={Pedro} texto1={"Pedro Henrique De Souza"} texto2={"RM 555533"} texto3={"1TDSPX"} />
             </main>
             
             <div className={styles.ajuste_repo}>
